@@ -5,7 +5,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(45deg, #ff6b6b, #ff8e8e);
+    background: #a80000;
+    background: linear-gradient(90deg, rgba(168, 0, 0, 1) 0%, rgba(189, 77, 77, 1) 50%, rgba(245, 223, 223, 1) 100%);
     font-family: 'Arial', sans-serif;
 }
 
@@ -20,7 +21,7 @@ body {
     height: 180px;
     margin: 30px auto;
     transform: rotate(-45deg);
-    background-color: #ff4d4d;
+    background-color: #ff0000;
     animation: heartbeat 1.5s ease-in-out infinite;
 }
 
@@ -30,7 +31,7 @@ body {
     position: absolute;
     width: 200px;
     height: 180px;
-    background-color: #ff4d4d;
+    background-color: #ff0000;
     border-radius: 50%;
 }
 
@@ -54,15 +55,18 @@ body {
     left: 50%;
     transform: translate(-50%, -50%) rotate(45deg);
     z-index: 2;
-    border: 4px solid white;
 }
 
 .counter {
+    text-align: center;
+    font-family: 'Arial', sans-serif;
     margin: 30px 0;
     color: white;
+    padding: 10px;
 }
 
 #days-counter {
+    font-family: Impact, fantasy;
     font-size: 2em;
     font-weight: bold;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
@@ -70,12 +74,31 @@ body {
 
 .message {
     color: white;
+    font-family: Andale Mono, monospace;
     max-width: 600px;
     margin: 0 auto;
     padding: 20px;
     font-size: 1.2em;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
+.play-button {
+    margin-top: 20px;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #ffffff;
+    color: #a80000;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 2px 2px 6px rgba(0,0,0,0.2);
+    transition: transform 0.2s;
+}
+
+.play-button:hover {
+    transform: scale(1.05);
+}
+
 
 @keyframes heartbeat {
     0% { transform: scale(1) rotate(-45deg); }
